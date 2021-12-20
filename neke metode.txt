@@ -1,0 +1,12 @@
+//Vraca objekte koji su veci od nekog broja
+ public List<Vet> GetVetsGT(int e)
+        {
+            return vetRepository.GetAllVets().Where(v => v.YearsExperiance > e).ToList();
+        }
+
+//Sortiranje
+ public List<Team> GetAllTeamsSort()
+        {
+            return teamRepository.GetAllTeams().OrderByDescending(t=>t.Points).ToList();
+
+        }
